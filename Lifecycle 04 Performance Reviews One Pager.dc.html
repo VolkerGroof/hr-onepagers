@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+@page { size: A4; margin: 0; }
+html, body { margin: 0; background: #d9dce3; }
+body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+a { color: #0AB0F0; text-decoration: none; }
+a:hover { color: #6fd2ff; }
+@media print { html, body { background: #0E1A35; } .sheet-wrap { padding: 0 !important; } }
+</style>
+</helmet>
+<div class="sheet-wrap" style="display: flex; justify-content: center; padding: 32px 0;">
+<div data-screen-label="04 Performance Reviews" style="position: relative; overflow: hidden; width: 794px; height: 1123px; box-sizing: border-box; padding: 36px 48px 32px; background: #0E1A35; color: #FFFFFF; font-family: 'Figtree', system-ui, sans-serif; display: flex; flex-direction: column; gap: 22px;">
+
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    
+    <a href="00%20Index.dc.html" title="All one pagers" style="font-size: 22px; font-weight: 800; letter-spacing: -0.03em; color: #0AB0F0;" style-hover="color: #6fd2ff;">Groof</a>
+  </div>
+
+  <div style="display: grid; grid-template-columns: minmax(0, 1fr) 64px minmax(0, 1.25fr); gap: 10px 0;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.22em; color: #A9B6CF; text-align: right;">ANNUAL REVIEWS</div>
+    <div></div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.22em; color: #0AB0F0;">GROOF</div>
+
+    <div style="font-size: 70px; line-height: 0.9; font-weight: 800; letter-spacing: -0.05em; color: #5E7299; text-align: right; padding-bottom: 6px;">Dreaded</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.2em; color: #A9B6CF; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 10px;">VS</div>
+    <div style="font-size: 70px; line-height: 0.9; font-weight: 800; letter-spacing: -0.05em; color: #0AB0F0; padding-bottom: 6px;">Wanted</div>
+
+    <div style="font-size: 13px; color: #A9B6CF; text-align: right; padding-bottom: 8px;">Once a year, hours per person</div>
+    <div></div>
+    <div style="font-size: 13px; color: #DCE4F2; padding-bottom: 8px;">15 minutes per report, several times a year.</div>
+
+    <div style="display: flex; flex-direction: column; gap: 6px; justify-content: space-between;">
+      <sc-for list="{{ fails }}" as="f" hint-placeholder-count="4">
+        <div style="display: flex; flex-direction: column; gap: 6px; align-items: stretch;">
+          <div style="border: 1px solid #2A3E6E; padding: 18px 16px; text-align: right; display: flex; flex-direction: column; gap: 4px;">
+            <div style="font-size: 17px; font-weight: 700; color: #C9D3E6;">{{ f.t }}</div>
+            <div style="font-size: 13px; line-height: 1.4; color: #A9B6CF;">{{ f.d }}</div>
+          </div>
+          <div style="text-align: right; padding-right: 14px; font-size: 12px; color: #5E7299; line-height: 1;">↓</div>
+        </div>
+      </sc-for>
+      <div style="background: #16264A; padding: 18px 16px; text-align: right; display: flex; flex-direction: column; gap: 3px; margin-top: auto;">
+        <div style="font-size: 24px; font-weight: 800; letter-spacing: -0.02em; color: #8193B6;">A-players leave</div>
+        <div style="font-size: 12px; line-height: 1.4; color: #A9B6CF;">The best go where they are seen.</div>
+      </div>
+    </div>
+    <div></div>
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <sc-for list="{{ steps }}" as="s" hint-placeholder-count="6">
+        <div style="background: #11264F; border: 1px solid #1F6FA8; padding: 11px 16px; display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 3px 8px;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #0AB0F0; padding-top: 2px;">{{ s.n }}</div>
+          <div style="font-size: 17px; font-weight: 700;">{{ s.t }}</div>
+          <div></div>
+          <div style="font-size: 13px; line-height: 1.4; color: #C9D3E6;">{{ s.d }}</div>
+        </div>
+      </sc-for>
+      <div style="background: #0AB0F0; color: #0E1A35; padding: 18px 16px; display: flex; flex-direction: column; gap: 3px; margin-top: auto;">
+        <div style="font-size: 24px; font-weight: 800; letter-spacing: -0.02em;">An ambitious powerhouse</div>
+        <div style="font-size: 12px; line-height: 1.4; font-weight: 600;">Growth on all levels. A-players stay. Bonus and promotions are fair.</div>
+      </div>
+    </div>
+  </div>
+
+  <p style="margin: 0; font-size: 14px; line-height: 1.5; color: #C9D3E6; text-wrap: pretty;">Groof turns reviews into something people really appreciate: for their career, for clarity, for real discussions with their leader and for fairness in promotion.</p>
+
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 20px; border-top: 1px solid #0AB0F0; padding-top: 12px; margin-top: auto;">
+    <div style="font-size: 20px; line-height: 1.15; font-weight: 800; letter-spacing: -0.02em;">Stop dreading reviews.<br><span style="color: #0AB0F0;">Make them your growth engine.</span></div>
+    <a href="https://calendar.app.google/n9NxSQKVSWHtaqTg7" target="_blank" style="background: #0AB0F0; color: #0E1A35; padding: 12px 18px; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; white-space: nowrap;" style-hover="background: #6fd2ff; color: #0E1A35;">BOOK A 30-MIN DEMO →</a>
+  </div>
+  <a href="00%20Index.dc.html" style="position: absolute; left: 48px; bottom: 10px; font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.2em; color: #5E7299;" style-hover="color: #0AB0F0;">← ALL ONE PAGERS</a>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:860,&quot;height&quot;:1190}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      fails: [
+        { t: 'Painful and rare', d: 'Dreaded by everyone. Forgotten until next year.' },
+        { t: '% of goal reached', d: 'Teams aim low. Ambition and creativity die.' },
+        { t: 'Subjective and vague', d: 'Unclear expectations. Unfair bonus and promotion.' },
+        { t: 'Skills pushed by HR', d: 'Culture and leadership stay out of the review.' }
+      ],
+      steps: [
+        { n: '01', t: 'Deliverables', d: 'Reviewed by complexity, speed and quality, not % of goal reached. Everyone can be bullish on goals.' },
+        { n: '02', t: 'Skills per role', d: 'Clear expectations set by a role steward, the same for everyone in the role. Leadership skills included.' },
+        { n: '03', t: 'Culture', d: 'Translated into observable behaviors. A real handle on culture building.' },
+        { n: '04', t: 'Self-development', d: 'Groof supports every individual to grow based on the review results.' },
+        { n: '05', t: 'Observations → 1on1s → reviews', d: 'Leaders gather observations that inform the 1on1s, which inform the reviews.' },
+        { n: '06', t: 'Clear expectations', d: 'Good discussions in every 1on1. No surprises in the review.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

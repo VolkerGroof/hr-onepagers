@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+@page { size: A4; margin: 0; }
+html, body { margin: 0; background: #d9dce3; }
+body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+a { color: #0AB0F0; text-decoration: none; }
+a:hover { color: #6fd2ff; }
+@media print { html, body { background: #0E1A35; } .sheet-wrap { padding: 0 !important; } }
+</style>
+</helmet>
+<div class="sheet-wrap" style="display: flex; justify-content: center; padding: 32px 0;">
+<div data-screen-label="ATS One Pager" style="position: relative; overflow: hidden; width: 794px; height: 1123px; box-sizing: border-box; padding: 36px 48px 32px; background: #0E1A35; color: #FFFFFF; font-family: 'Figtree', system-ui, sans-serif; display: flex; flex-direction: column; gap: 28px;">
+
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.26em; color: #A9B6CF;">FOR FOUNDERS · HIRING</div>
+    <a href="00%20Index.dc.html" title="All one pagers" style="font-size: 22px; font-weight: 800; letter-spacing: -0.03em; color: #0AB0F0;" style-hover="color: #6fd2ff;">Groof</a>
+  </div>
+
+  <div style="display: grid; grid-template-columns: minmax(0, 1fr) 104px minmax(0, 1fr); gap: 10px 0; align-items: stretch;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.22em; color: #A9B6CF; text-align: right;">ASHBY, GREENHOUSE &amp; CO.</div>
+    <div></div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.22em; color: #0AB0F0;">GROOF</div>
+
+    <div style="font-size: 60px; line-height: 0.9; font-weight: 800; letter-spacing: -0.05em; color: #5E7299; text-align: right; padding-bottom: 6px; white-space: nowrap;">Separated</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.2em; color: #A9B6CF; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 10px;">VS</div>
+    <div style="font-size: 60px; line-height: 0.9; font-weight: 800; letter-spacing: -0.05em; color: #0AB0F0; padding-bottom: 6px; white-space: nowrap;">Together</div>
+
+    <div style="font-size: 13px; color: #A9B6CF; text-align: right; padding-bottom: 10px;">The recruiter's tool</div>
+    <div></div>
+    <div style="font-size: 13px; color: #DCE4F2; padding-bottom: 10px;">One tool for recruiter, hiring manager and team</div>
+
+    <sc-for list="{{ rows }}" as="r" hint-placeholder-count="4">
+      <div style="border: 1px solid #2A3E6E; padding: 14px 16px; text-align: right; display: flex; flex-direction: column; gap: 4px;">
+        <div style="font-size: 17px; font-weight: 700; color: #C9D3E6;">{{ r.ht }}</div>
+        <div style="font-size: 13px; line-height: 1.4; color: #A9B6CF;">{{ r.hd }}</div>
+      </div>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.18em; color: #A9B6CF; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 6px;">{{ r.k }}</div>
+      <div style="background: #11264F; border: 1px solid #1F6FA8; padding: 14px 16px; display: flex; flex-direction: column; gap: 4px;">
+        <div style="font-size: 17px; font-weight: 700;">{{ r.gt }}</div>
+        <div style="font-size: 13px; line-height: 1.4; color: #C9D3E6;">{{ r.gd }}</div>
+      </div>
+    </sc-for>
+
+    <div style="background: #16264A; padding: 16px; text-align: right; display: flex; flex-direction: column; gap: 4px;">
+      <div style="font-size: 22px; font-weight: 800; letter-spacing: -0.02em; color: #8193B6;">Hiring as a handover</div>
+    </div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.18em; color: #A9B6CF; display: flex; align-items: center; justify-content: center; text-align: center;">RESULT</div>
+    <div style="background: #0AB0F0; color: #0E1A35; padding: 16px; display: flex; flex-direction: column; gap: 4px;">
+      <div style="font-size: 22px; font-weight: 800; letter-spacing: -0.02em;">Hiring as teamwork</div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <div style="font-size: 18px; font-weight: 800; letter-spacing: -0.02em;">Your choice.</div>
+    <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px;">
+      <div style="background: #11264F; border: 1px solid #0AB0F0; padding: 16px; display: flex; flex-direction: column; gap: 6px;">
+        <div style="font-size: 17px; font-weight: 800; color: #0AB0F0;">Groof ATS</div>
+        <div style="font-size: 13px; line-height: 1.45; color: #DCE4F2;">Lean and fully integrated. Personalize it and add features as you grow.</div>
+      </div>
+      <div style="border: 1px solid #2A3E6E; padding: 16px; display: flex; flex-direction: column; gap: 6px;">
+        <div style="font-size: 17px; font-weight: 800;">Your ATS + Groof</div>
+        <div style="font-size: 13px; line-height: 1.45; color: #C9D3E6;">Need every feature? Keep Ashby, Greenhouse &amp; co. Groof integrates them.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 20px; border-top: 1px solid #0AB0F0; padding-top: 12px; margin-top: auto;">
+    <div style="font-size: 20px; line-height: 1.15; font-weight: 800; letter-spacing: -0.02em;">Hire as one team.<br><span style="color: #0AB0F0;">Grow at your own pace.</span></div>
+    <a href="https://calendar.app.google/n9NxSQKVSWHtaqTg7" target="_blank" style="background: #0AB0F0; color: #0E1A35; padding: 12px 18px; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; white-space: nowrap;" style-hover="background: #6fd2ff; color: #0E1A35;">BOOK A 30-MIN DEMO →</a>
+  </div>
+  <a href="00%20Index.dc.html" style="position: absolute; left: 48px; bottom: 10px; font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.2em; color: #5E7299;" style-hover="color: #0AB0F0;">← ALL ONE PAGERS</a>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:860,&quot;height&quot;:1190}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      rows: [
+        { k: 'WHO', ht: 'Recruiters', hd: 'Hiring managers and teams log in rarely.', gt: 'Recruiter, manager and team', gd: 'All work in the same tool.' },
+        { k: 'FLOW', ht: 'Hire, then hand over', hd: 'Onboarding starts again in another system.', gt: 'Hire into the team', gd: 'Staffing, ATS and onboarding in one flow.' },
+        { k: 'FEATURES', ht: 'A gazillion features', hd: 'Paid for, rarely used.', gt: 'What you need now', gd: 'Personalize and add features later.' },
+        { k: 'PACE', ht: 'Built for big recruiting teams', hd: 'You adapt to the tool.', gt: 'Grows with you', gd: 'At the pace of your own growth.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

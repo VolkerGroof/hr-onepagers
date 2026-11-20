@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+@page { size: A4; margin: 0; }
+html, body { margin: 0; background: #d9dce3; }
+body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+a { color: #0AB0F0; text-decoration: none; }
+a:hover { color: #6fd2ff; }
+@media print { html, body { background: #0E1A35; } .sheet-wrap { padding: 0 !important; } }
+</style>
+</helmet>
+<div class="sheet-wrap" style="display: flex; justify-content: center; padding: 32px 0;">
+<div data-screen-label="CoachHub One Pager" style="position: relative; overflow: hidden; width: 794px; height: 1123px; box-sizing: border-box; padding: 36px 48px 32px; background: #0E1A35; color: #FFFFFF; font-family: 'Figtree', system-ui, sans-serif; display: flex; flex-direction: column; gap: 16px;">
+
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.26em; color: #A9B6CF;">FOR FOUNDERS · LEADERSHIP &amp; GROWTH</div>
+    <a href="00%20Index.dc.html" title="All one pagers" style="font-size: 22px; font-weight: 800; letter-spacing: -0.03em; color: #0AB0F0;" style-hover="color: #6fd2ff;">Groof</a>
+  </div>
+
+  <div style="display: grid; grid-template-columns: minmax(0, 1fr) 104px minmax(0, 1fr); gap: 8px 0; align-items: stretch;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.22em; color: #A9B6CF; text-align: right;">COACHHUB</div>
+    <div></div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.22em; color: #0AB0F0;">GROOF</div>
+
+    <div style="font-size: 58px; line-height: 0.9; font-weight: 800; letter-spacing: -0.05em; color: #5E7299; text-align: right; padding-bottom: 6px; white-space: nowrap;">Scattered</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.2em; color: #A9B6CF; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 10px;">VS</div>
+    <div style="font-size: 58px; line-height: 0.9; font-weight: 800; letter-spacing: -0.05em; color: #0AB0F0; padding-bottom: 6px; white-space: nowrap;">Coherent</div>
+
+    <div style="font-size: 13px; color: #A9B6CF; text-align: right; padding-bottom: 6px;">Coaching on every corner</div>
+    <div></div>
+    <div style="font-size: 13px; color: #DCE4F2; padding-bottom: 6px;">Growth installed in the system</div>
+
+    <sc-for list="{{ rows }}" as="r" hint-placeholder-count="6">
+      <div style="border: 1px solid #2A3E6E; padding: 8px 16px; text-align: right; display: flex; flex-direction: column; gap: 3px;">
+        <div style="font-size: 15px; font-weight: 700; color: #C9D3E6;">{{ r.ht }}</div>
+        <div style="font-size: 12px; line-height: 1.4; color: #A9B6CF;">{{ r.hd }}</div>
+      </div>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.18em; color: #A9B6CF; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 6px;">{{ r.k }}</div>
+      <div style="background: #11264F; border: 1px solid #1F6FA8; padding: 8px 16px; display: flex; flex-direction: column; gap: 3px;">
+        <div style="font-size: 15px; font-weight: 700;">{{ r.gt }}</div>
+        <div style="font-size: 12px; line-height: 1.4; color: #C9D3E6;">{{ r.gd }}</div>
+      </div>
+    </sc-for>
+
+    <div style="background: #16264A; padding: 12px 16px; text-align: right; display: flex; flex-direction: column; gap: 3px;">
+      <div style="font-size: 20px; font-weight: 800; letter-spacing: -0.02em; color: #8193B6;">Many good conversations</div>
+      <div style="font-size: 12px; line-height: 1.4; color: #A9B6CF;">Growth in many directions. Little coherence.</div>
+    </div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.18em; color: #A9B6CF; display: flex; align-items: center; justify-content: center; text-align: center;">RESULT</div>
+    <div style="background: #0AB0F0; color: #0E1A35; padding: 12px 16px; display: flex; flex-direction: column; gap: 3px;">
+      <div style="font-size: 20px; font-weight: 800; letter-spacing: -0.02em;">One team</div>
+      <div style="font-size: 12px; line-height: 1.4; font-weight: 600;">Energy in one direction. The company spirit stays intact.</div>
+    </div>
+  </div>
+
+  <p style="margin: 0; max-width: 698px; font-size: 13px; line-height: 1.45; color: #C9D3E6; text-wrap: pretty;">CoachHub gives every employee access to a coach. Without a system around it, people grow in many places but not in one direction. Groof installs growth in the organization itself: systematically aligned with the strategy and guardrailed by leadership and the C-level.</p>
+
+  <div style="display: flex flex-direction: column; gap: 10px; display: flex; flex-direction: column;">
+    <div style="font-size: 18px; font-weight: 800; letter-spacing: -0.02em;">Full stack org OS. <span style="color: #0AB0F0;">Growth installed, not booked.</span></div>
+    <div style="background: #11264F; border: 1px solid #0AB0F0; padding: 12px 16px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px 20px;">
+      <div style="display: flex; flex-direction: column; gap: 3px;">
+        <div style="font-size: 13px; font-weight: 700; color: #0AB0F0;">Reviews</div>
+        <div style="font-size: 12px; line-height: 1.4; color: #DCE4F2;">Clear expectations on deliverables, skills and culture.</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 3px;">
+        <div style="font-size: 13px; font-weight: 700; color: #0AB0F0;">Self-development</div>
+        <div style="font-size: 12px; line-height: 1.4; color: #DCE4F2;">On the job, based on the reviews.</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 3px;">
+        <div style="font-size: 13px; font-weight: 700; color: #0AB0F0;">Team playbooks</div>
+        <div style="font-size: 12px; line-height: 1.4; color: #DCE4F2;">Teams grow together on every level.</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 3px;">
+        <div style="font-size: 13px; font-weight: 700; color: #0AB0F0;">Leader development</div>
+        <div style="font-size: 12px; line-height: 1.4; color: #DCE4F2;">Nine leadership roles, daily journaling.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 20px; border-top: 1px solid #0AB0F0; padding-top: 12px; margin-top: auto;">
+    <div style="font-size: 20px; line-height: 1.15; font-weight: 800; letter-spacing: -0.02em;">Don't book growth.<br><span style="color: #0AB0F0;">Install it.</span></div>
+    <a href="https://calendar.app.google/n9NxSQKVSWHtaqTg7" target="_blank" style="background: #0AB0F0; color: #0E1A35; padding: 12px 18px; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; white-space: nowrap;" style-hover="background: #6fd2ff; color: #0E1A35;">BOOK A 30-MIN DEMO →</a>
+  </div>
+  <a href="00%20Index.dc.html" style="position: absolute; left: 48px; bottom: 10px; font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.2em; color: #5E7299;" style-hover="color: #0AB0F0;">← ALL ONE PAGERS</a>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:860,&quot;height&quot;:1190}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      rows: [
+        { k: 'APPROACH', ht: 'Coaching on every corner', hd: 'Sessions with external coaches, one person or group at a time.', gt: 'Growth installed in the org', gd: 'Reviews, self-development and team playbooks in the daily work.' },
+        { k: 'ALIGNMENT', ht: 'Each coachee, own direction', hd: 'Goals set between coach and coachee. Loose link to the strategy.', gt: 'Systematically aligned', gd: 'Every development step pays into missions and strategy.' },
+        { k: 'CONTROL', ht: 'Leadership watches from outside', hd: 'Sessions are private. The C-level sees engagement metrics.', gt: 'Guardrails for leadership', gd: 'The C-level sets what the company wants to see, and steers it.' },
+        { k: 'TEAMS', ht: 'The individual in focus', hd: 'Teams and teams of teams stay as they are.', gt: 'Teams develop together', gd: 'Team playbooks and hygiene journals on all levels.' },
+        { k: 'SOURCE', ht: 'Outside the work', hd: 'Coaching happens next to the job, not in it.', gt: 'On the job', gd: 'Leaders develop their people, supported by Groof and HR.' },
+        { k: 'DURATION', ht: 'A program with an end', hd: 'Effects fade when the sessions stop.', gt: 'A permanent system', gd: 'Growth compounds as long as the company runs.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

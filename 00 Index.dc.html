@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+@page { size: A4; margin: 0; }
+html, body { margin: 0; background: #d9dce3; }
+body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+a { color: #0AB0F0; text-decoration: none; }
+a:hover { color: #6fd2ff; }
+@media print { html, body { background: #0E1A35; } .sheet-wrap { padding: 0 !important; } }
+</style>
+</helmet>
+<div class="sheet-wrap" style="display: flex; justify-content: center; padding: 32px 0;">
+<div data-screen-label="00 Index" style="position: relative; overflow: hidden; width: 794px; height: 1123px; box-sizing: border-box; padding: 36px 48px 32px; background: #0E1A35; color: #FFFFFF; font-family: 'Figtree', system-ui, sans-serif; display: flex; flex-direction: column; gap: 36px;">
+
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.26em; color: #A9B6CF;">GROOF ONE PAGERS</div>
+    <div style="font-size: 22px; font-weight: 800; letter-spacing: -0.03em; color: #0AB0F0;">Groof</div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <div style="font-size: 70px; line-height: 0.9; font-weight: 800; letter-spacing: -0.05em;">The Org OS.</div>
+    <div style="font-size: 70px; line-height: 0.9; font-weight: 800; letter-spacing: -0.05em; color: #0AB0F0;">One page at a time.</div>
+    <p style="margin: 8px 0 0; max-width: 620px; font-size: 15px; line-height: 1.5; color: #C9D3E6; text-wrap: pretty;">How Groof compares to the usual tools and methods, and how it changes every step of the HR lifecycle.</p>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.22em; color: #A9B6CF;">GROOF VS</div>
+    <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px;">
+      <sc-for list="{{ vs }}" as="v" hint-placeholder-count="5">
+        <a href="{{ v.href }}" style="background: #11264F; border: 1px solid #1F6FA8; padding: 22px 14px; color: #FFFFFF; display: flex; flex-direction: column; gap: 4px;" style-hover="border-color: #0AB0F0; background: #16305F;">
+          <span style="font-size: 18px; font-weight: 700;">{{ v.t }}</span>
+          <span style="font-size: 13px; line-height: 1.35; color: #A9B6CF;">{{ v.d }}</span>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.22em; color: #A9B6CF;">HR LIFECYCLE</div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px;">
+      <sc-for list="{{ life }}" as="l" hint-placeholder-count="12">
+        <a href="{{ l.href }}" style="background: #11264F; border: 1px solid #1F6FA8; padding: 20px 16px; color: #FFFFFF; display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 2px 8px; align-items: baseline;" style-hover="border-color: #0AB0F0; background: #16305F;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #0AB0F0;">{{ l.n }}</span>
+          <span style="font-size: 18px; font-weight: 700;">{{ l.t }}</span>
+          <span></span>
+          <span style="font-size: 13px; line-height: 1.35; color: #A9B6CF;">{{ l.d }}</span>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 20px; border-top: 1px solid #0AB0F0; padding-top: 12px; margin-top: auto;">
+    <div style="font-size: 20px; line-height: 1.15; font-weight: 800; letter-spacing: -0.02em;">Be part of the leading pack.<br><span style="color: #0AB0F0;">Your decision.</span></div>
+    <a href="https://calendar.app.google/n9NxSQKVSWHtaqTg7" target="_blank" style="background: #0AB0F0; color: #0E1A35; padding: 12px 18px; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; white-space: nowrap;" style-hover="background: #6fd2ff; color: #0E1A35;">BOOK A 30-MIN DEMO →</a>
+  </div>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:860,&quot;height&quot;:1190}}">
+class Component extends DCLogic {
+  renderVals() {
+    const f = n => encodeURI(n + '.dc.html');
+    return {
+      vs: [
+        { t: 'Personio', d: 'Legacy HRIS', href: f('Groof vs HRIS') },
+        { t: 'Holacracy', d: 'Self-organization', href: f('Groof vs Holacracy One Pager') },
+        { t: 'OKRs', d: 'Goal setting', href: f('Groof vs OKRs One Pager') },
+        { t: 'CoachHub', d: 'Coaching', href: f('Groof vs CoachHub One Pager') },
+        { t: 'ATS', d: 'Ashby, Greenhouse', href: f('Groof vs ATS One Pager') }
+      ],
+      life: [
+        { n: '01', t: 'Culture', d: 'Preached vs lived', href: f('Lifecycle 01 Culture One Pager') },
+        { n: '02', t: 'Off-sites', d: 'Event vs habit', href: f('Lifecycle 02 Off-sites One Pager') },
+        { n: '03', t: 'Feel-good Manager', d: 'Perks vs purpose', href: f('Lifecycle 03 Feel-good Manager One Pager') },
+        { n: '04', t: 'Performance Reviews', d: 'Dreaded vs wanted', href: f('Lifecycle 04 Performance Reviews One Pager') },
+        { n: '05', t: 'Retention', d: 'Leaving vs staying', href: f('Lifecycle 05 Retention One Pager') },
+        { n: '06', t: 'Learning & Development', d: 'Pushed vs pulled', href: f('Lifecycle 06 Learning - Development One Pager') },
+        { n: '07', t: 'eNPS', d: 'Measured vs raised', href: f('Lifecycle 07 eNPS One Pager') },
+        { n: '08', t: 'Employee Experience', d: 'Decorated vs designed', href: f('Lifecycle 08 Employee Experience One Pager') },
+        { n: '09', t: 'Hiring', d: 'Finding vs forming', href: f('Lifecycle 09 Hiring One Pager') },
+        { n: '10', t: 'Onboarding', d: 'Equipped vs belonging', href: f('Lifecycle 10 Onboarding One Pager') },
+        { n: '11', t: 'Leadership', d: 'Expected vs supported', href: f('Lifecycle 11 Leadership One Pager') },
+        { n: '12', t: 'AI Transformation', d: 'Imposed vs owned', href: f('Lifecycle 12 AI Transformation One Pager') }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

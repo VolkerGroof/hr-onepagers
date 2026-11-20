@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+@page { size: A4; margin: 0; }
+html, body { margin: 0; background: #d9dce3; }
+body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+a { color: #0AB0F0; text-decoration: none; }
+a:hover { color: #6fd2ff; }
+@media print { html, body { background: #0E1A35; } .sheet-wrap { padding: 0 !important; } }
+</style>
+</helmet>
+<div class="sheet-wrap" style="display: flex; justify-content: center; padding: 32px 0;">
+<div data-screen-label="OKRs One Pager" style="position: relative; overflow: hidden; width: 794px; height: 1123px; box-sizing: border-box; padding: 36px 48px 32px; background: #0E1A35; color: #FFFFFF; font-family: 'Figtree', system-ui, sans-serif; display: flex; flex-direction: column; gap: 16px;">
+
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.26em; color: #A9B6CF;">FOR FOUNDERS · GOALS &amp; PERFORMANCE</div>
+    <a href="00%20Index.dc.html" title="All one pagers" style="font-size: 22px; font-weight: 800; letter-spacing: -0.03em; color: #0AB0F0;" style-hover="color: #6fd2ff;">Groof</a>
+  </div>
+
+  <div style="display: grid; grid-template-columns: minmax(0, 1fr) 104px minmax(0, 1fr); gap: 8px 0; align-items: stretch;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.22em; color: #A9B6CF; text-align: right;">OKRS</div>
+    <div></div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.22em; color: #0AB0F0;">GROOF</div>
+
+    <div style="font-size: 54px; line-height: 0.9; font-weight: 800; letter-spacing: -0.05em; color: #5E7299; text-align: right; padding-bottom: 6px; white-space: nowrap;">Aiming low</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.2em; color: #A9B6CF; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 10px;">VS</div>
+    <div style="font-size: 54px; line-height: 0.9; font-weight: 800; letter-spacing: -0.05em; color: #0AB0F0; padding-bottom: 6px; white-space: nowrap;">Aiming high</div>
+
+    <div style="font-size: 13px; color: #A9B6CF; text-align: right; padding-bottom: 6px;">Performance = % of goal reached</div>
+    <div></div>
+    <div style="font-size: 13px; color: #DCE4F2; padding-bottom: 6px;">Performance driven by culture</div>
+
+    <sc-for list="{{ rows }}" as="r" hint-placeholder-count="5">
+      <div style="border: 1px solid #2A3E6E; padding: 8px 16px; text-align: right; display: flex; flex-direction: column; gap: 3px;">
+        <div style="font-size: 15px; font-weight: 700; color: #C9D3E6;">{{ r.ht }}</div>
+        <div style="font-size: 12px; line-height: 1.4; color: #A9B6CF;">{{ r.hd }}</div>
+      </div>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.18em; color: #A9B6CF; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 6px;">{{ r.k }}</div>
+      <div style="background: #11264F; border: 1px solid #1F6FA8; padding: 8px 16px; display: flex; flex-direction: column; gap: 3px;">
+        <div style="font-size: 15px; font-weight: 700;">{{ r.gt }}</div>
+        <div style="font-size: 12px; line-height: 1.4; color: #C9D3E6;">{{ r.gd }}</div>
+      </div>
+    </sc-for>
+
+    <div style="background: #16264A; padding: 12px 16px; text-align: right; display: flex; flex-direction: column; gap: 3px;">
+      <div style="font-size: 20px; font-weight: 800; letter-spacing: -0.02em; color: #8193B6;">Goal theater</div>
+      <div style="font-size: 12px; line-height: 1.4; color: #A9B6CF;">The numbers look fine. Ambition dies.</div>
+    </div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 0.18em; color: #A9B6CF; display: flex; align-items: center; justify-content: center; text-align: center;">RESULT</div>
+    <div style="background: #0AB0F0; color: #0E1A35; padding: 12px 16px; display: flex; flex-direction: column; gap: 3px;">
+      <div style="font-size: 20px; font-weight: 800; letter-spacing: -0.02em;">Ambition &amp; confidence</div>
+      <div style="font-size: 12px; line-height: 1.4; font-weight: 600;">Throughout the company. The company spirit stays intact.</div>
+    </div>
+  </div>
+
+  <p style="margin: 0; max-width: 698px; font-size: 13px; line-height: 1.45; color: #C9D3E6; text-wrap: pretty;">OKRs promise focus and alignment. Once performance is judged by % of goal reached, goal setting becomes politics. Groof is a holistic, culture-driven performance tool: ambitious goals, reviews of how people work, and psychological safety in every team.</p>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <div style="font-size: 18px; font-weight: 800; letter-spacing: -0.02em;">Full stack org OS. <span style="color: #0AB0F0;">First principles of inspiring goal setting.</span></div>
+    <div style="background: #11264F; border: 1px solid #0AB0F0; padding: 12px 16px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px 20px;">
+      <div style="display: flex; flex-direction: column; gap: 3px;">
+        <div style="font-size: 13px; font-weight: 700; color: #0AB0F0;">Strategy on one page</div>
+        <div style="font-size: 12px; line-height: 1.4; color: #DCE4F2;">Everyone sees how their work pays in.</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 3px;">
+        <div style="font-size: 13px; font-weight: 700; color: #0AB0F0;">Ambitious bets</div>
+        <div style="font-size: 12px; line-height: 1.4; color: #DCE4F2;">Goals that inspire through challenge.</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 3px;">
+        <div style="font-size: 13px; font-weight: 700; color: #0AB0F0;">Reviews of how</div>
+        <div style="font-size: 12px; line-height: 1.4; color: #DCE4F2;">Complexity, speed and quality.</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 3px;">
+        <div style="font-size: 13px; font-weight: 700; color: #0AB0F0;">Psychological safety</div>
+        <div style="font-size: 12px; line-height: 1.4; color: #DCE4F2;">Installed and repaired in all teams.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 20px; border-top: 1px solid #0AB0F0; padding-top: 12px; margin-top: auto;">
+    <div style="font-size: 20px; line-height: 1.15; font-weight: 800; letter-spacing: -0.02em;">Aim higher.<br><span style="color: #0AB0F0;">Without fear.</span></div>
+    <a href="https://calendar.app.google/n9NxSQKVSWHtaqTg7" target="_blank" style="background: #0AB0F0; color: #0E1A35; padding: 12px 18px; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; white-space: nowrap;" style-hover="background: #6fd2ff; color: #0E1A35;">BOOK A 30-MIN DEMO →</a>
+  </div>
+  <a href="00%20Index.dc.html" style="position: absolute; left: 48px; bottom: 10px; font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.2em; color: #5E7299;" style-hover="color: #0AB0F0;">← ALL ONE PAGERS</a>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:860,&quot;height&quot;:1190}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      rows: [
+        { k: 'GOALS', ht: 'Set to be safe', hd: 'When reviews hang on % reached, teams aim low and sugarcoat.', gt: 'Set to inspire', gd: 'Super ambitious bets with probabilities. Failure is an option.' },
+        { k: 'REVIEWS', ht: '% of goal reached', hd: 'The outcome alone decides. Luck and politics count more than work.', gt: 'How people work', gd: 'Deliverables reviewed by complexity, speed and quality.' },
+        { k: 'PLANNING', ht: 'OKR bureaucracy', hd: 'Cascading levels, endless alignment, lost in the matrix.', gt: '30-min syncs', gd: 'Bet scores and news on missions, initiatives and experiments.' },
+        { k: 'STRUCTURE', ht: 'Goals assigned to departments', hd: 'Chiefdoms harden. Yearly budgets miss the market.', gt: 'Teams built around missions', gd: 'Fluid budgets, re-prioritized by KPI contribution per € spent.' },
+        { k: 'SAFETY', ht: 'Fear of missing the number', hd: 'Tensions are hidden to protect the score.', gt: 'Psychological safety', gd: 'Installed in all teams and repaired when it breaks.' },
+        { k: 'TALENT', ht: 'Ambitious people turn off', hd: 'Playing safe is rewarded. The best leave.', gt: 'A culture of ambition', gd: 'Confidence grows on every level, from teams to the C-level.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+@page { size: A4; margin: 0; }
+html, body { margin: 0; background: #d9dce3; }
+body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+a { color: #0AB0F0; text-decoration: none; }
+a:hover { color: #6fd2ff; }
+@media print { html, body { background: #0E1A35; } .sheet-wrap { padding: 0 !important; } }
+</style>
+</helmet>
+<div class="sheet-wrap" style="display: flex; justify-content: center; padding: 32px 0;">
+<div data-screen-label="05 Retention" style="position: relative; overflow: hidden; width: 794px; height: 1123px; box-sizing: border-box; padding: 36px 48px 32px; background: #0E1A35; color: #FFFFFF; font-family: 'Figtree', system-ui, sans-serif; display: flex; flex-direction: column; gap: 16px;">
+
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.26em; color: #A9B6CF;">HR LIFECYCLE SERIES · 05 RETENTION</div>
+    <a href="00%20Index.dc.html" title="All one pagers" style="font-size: 22px; font-weight: 800; letter-spacing: -0.03em; color: #0AB0F0;" style-hover="color: #6fd2ff;">Groof</a>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 132px minmax(0, 1fr) 44px minmax(0, 1.35fr); gap: 8px 0;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.22em; color: #A9B6CF;">REASON</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.22em; color: #A9B6CF; text-align: right;">LEGACY</div>
+    <div></div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.22em; color: #0AB0F0;">GROOF</div>
+
+    <div></div>
+    <div style="font-size: 60px; line-height: 0.9; font-weight: 800; letter-spacing: -0.05em; color: #5E7299; text-align: right; padding-bottom: 8px;">Leaving</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.2em; color: #A9B6CF; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 12px;">VS</div>
+    <div style="font-size: 60px; line-height: 0.9; font-weight: 800; letter-spacing: -0.05em; color: #0AB0F0; padding-bottom: 8px;">Staying</div>
+
+    <sc-for list="{{ rows }}" as="r" hint-placeholder-count="8">
+      <div style="display: flex; flex-direction: column; justify-content: center; gap: 2px; padding: 9px 8px 9px 0;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #0AB0F0;">{{ r.n }}</div>
+        <div style="font-size: 14px; font-weight: 700; line-height: 1.2;">{{ r.k }}</div>
+      </div>
+      <div style="border: 1px solid #2A3E6E; padding: 9px 14px; text-align: right; font-size: 13px; line-height: 1.4; color: #A9B6CF; display: flex; align-items: center; justify-content: flex-end;">{{ r.l }}</div>
+      <div></div>
+      <div style="background: #11264F; border: 1px solid #1F6FA8; padding: 9px 14px; font-size: 13px; line-height: 1.4; color: #DCE4F2; display: flex; align-items: center;">{{ r.g }}</div>
+    </sc-for>
+
+    <div></div>
+    <div style="background: #16264A; padding: 14px 12px; text-align: right; display: flex; flex-direction: column; gap: 3px;">
+      <div style="font-size: 20px; font-weight: 800; letter-spacing: -0.02em; color: #8193B6;">Mercenary culture</div>
+      <div style="font-size: 12px; line-height: 1.4; color: #A9B6CF;">A-players leave. Hiring never stops.</div>
+    </div>
+    <div></div>
+    <div style="background: #0AB0F0; color: #0E1A35; padding: 14px 12px; display: flex; flex-direction: column; gap: 3px;">
+      <div style="font-size: 20px; font-weight: 800; letter-spacing: -0.02em;">Companies soar</div>
+      <div style="font-size: 12px; line-height: 1.4; font-weight: 600;">eNPS through the roof. Way less hiring. Teams stay together and keep growing: compounding growth.</div>
+    </div>
+  </div>
+
+  <p style="margin: 0; font-size: 14px; line-height: 1.5; color: #C9D3E6; text-wrap: pretty;">Companies try to hold people with benefits and perks. People leave for other reasons: unfair promotion, bad leaders, no career path, toxic culture and boring work. Groof fixes the causes.</p>
+
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 20px; border-top: 1px solid #0AB0F0; padding-top: 12px; margin-top: auto;">
+    <div style="font-size: 20px; line-height: 1.15; font-weight: 800; letter-spacing: -0.02em;">Stop buying loyalty.<br><span style="color: #0AB0F0;">Build a company people won't leave.</span></div>
+    <a href="https://calendar.app.google/n9NxSQKVSWHtaqTg7" target="_blank" style="background: #0AB0F0; color: #0E1A35; padding: 12px 18px; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; white-space: nowrap;" style-hover="background: #6fd2ff; color: #0E1A35;">BOOK A 30-MIN DEMO →</a>
+  </div>
+  <a href="00%20Index.dc.html" style="position: absolute; left: 48px; bottom: 10px; font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.2em; color: #5E7299;" style-hover="color: #0AB0F0;">← ALL ONE PAGERS</a>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:860,&quot;height&quot;:1190}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      rows: [
+        { n: '01', k: 'Unfair promotion', l: 'Yearly reviews, biased and opinionated. Nobody knows who is really good.', g: 'Guardrailed, simple observations, calibrated across the company. You know who is an A-player, above bar or under bar. Only A-players are promoted.' },
+        { n: '02', k: 'Bad leaders', l: 'Hoping for luck. Off-the-job trainings.', g: 'Leaders are trained on the job in 9 Groof roles, with skills reviewed by their own leaders. They become transformative team leaders.' },
+        { n: '03', k: 'No career path', l: 'Unclear expectations. Unclear next step.', g: 'Clear expectations and a clear path from junior to lead. Those who leave for career reasons are not regretted attrition.' },
+        { n: '04', k: 'Toxic culture', l: 'An artificial feel-good culture on top.', g: 'Team hygiene and a safe space for open communication, in the team, the team of teams and the department.' },
+        { n: '05', k: 'Unchallenging jobs', l: 'Little meaning. Goals tied to reviews, so everyone aims low.', g: 'Goals are not tied to reviews. Super ambitious goals let people grow, strive and thrive. Reaching something special gives meaning.' },
+        { n: '06', k: 'No renown', l: 'Just another employer.', g: 'Groof companies are known for thriving and reaching the impossible.' },
+        { n: '07', k: 'Benefits race', l: 'Benefits feed a mercenary culture. People leave for better ones.', g: "Missionary cultures, where A-players don't even need an average salary." },
+        { n: '08', k: 'Culture adders leave', l: 'Culture work is invisible and unrewarded.', g: 'Culture is part of the review. Every culture add is rewarded, so culture adders stay.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
